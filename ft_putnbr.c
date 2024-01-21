@@ -6,12 +6,11 @@
 /*   By: pedalexa <pedalexa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 18:13:25 by pedalexa          #+#    #+#             */
-/*   Updated: 2024/01/21 22:58:43 by pedalexa         ###   ########.fr       */
+/*   Updated: 2024/01/21 22:59:42 by pedalexa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 static void	print_nbr(int n)
 {
