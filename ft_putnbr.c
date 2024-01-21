@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pedalexa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pedalexa <pedalexa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 18:13:25 by pedalexa          #+#    #+#             */
-/*   Updated: 2023/09/17 04:34:33 by pedalexa         ###   ########.fr       */
+/*   Updated: 2024/01/21 22:58:43 by pedalexa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static void	print_nbr(int n)
 {
@@ -46,9 +47,11 @@ int	ft_putnbr(int n)
 	count = 0;
 	nr = n;
 	print_nbr(n);
-	if (nr < 0)
+	if (nr == 0)
+		return (1);
+	else if (nr < 0)
 	{
-		count = 1;
+		count++;
 		nr = -nr;
 	}
 	while (nr != 0)
@@ -58,11 +61,12 @@ int	ft_putnbr(int n)
 	}
 	return (count);
 }
-/*
-int main ()
+
+/* int main ()
 {
-	int nb = 1234;
-	printf(" return value: %d", ft_putnbr(nb));
+	int ret_value;
+
+    ret_value = ft_putnbr(0);
+	printf("\nreturn value: %d\n", ret_value);
 	return 0;
-}
-*/
+} */

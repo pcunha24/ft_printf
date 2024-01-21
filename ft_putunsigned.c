@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pedalexa <pedalexa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pedalexa <pedalexa@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 02:05:34 by pedalexa          #+#    #+#             */
-/*   Updated: 2023/11/08 13:08:43 by pedalexa         ###   ########.fr       */
+/*   Updated: 2024/01/21 22:58:05 by pedalexa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ char	*ft_utoa(unsigned int n)
 	char	*str;
 
 	len = ft_unlen(n);
-	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!len)
 		return (NULL);
+	str = (char *)malloc((len + 1) * sizeof(char));
 	str[len] = '\0';
 	while (len > 0)
 	{
@@ -56,6 +56,7 @@ int	ft_putunsigned(int n)
 	if (n == 0)
 	{
 		write (1, "0", 1);
+		free(str);
 		return (1);
 	}
 	while (str[i])
