@@ -26,7 +26,6 @@ int		ft_puthexadecimal(unsigned int n, const char format);
 int		ft_putpointer(size_t ptr);
 int		ft_putunsigned(int n);
 int		ft_putnbr(int n);
-char	*ft_strdup(const char *string);
 size_t	ft_strlen(const char *str);
 
 #endif

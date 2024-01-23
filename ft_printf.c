@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_format(va_list args, const char format)
 {
@@ -60,7 +59,7 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
-/*
+/* 
 int main (void)
 {
 	//Test without variables
@@ -169,4 +168,4 @@ int main (void)
 
 	return 0;
 }
-*/
+ */

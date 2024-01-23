@@ -36,26 +36,6 @@ int	ft_putchar(char c)
 	return (1);
 }
 
-char	*ft_strdup(const char *string)
-{
-	char	*dup;
-	int		i;
-
-	i = 0;
-	dup = (char *)malloc((ft_strlen(string) + 1) * sizeof(char));
-	if (dup == NULL)
-	{
-		return (NULL);
-	}
-	while (string[i] != '\0')
-	{
-		dup[i] = string[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
-
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
